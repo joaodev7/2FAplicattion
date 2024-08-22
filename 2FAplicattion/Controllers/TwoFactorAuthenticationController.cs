@@ -12,7 +12,7 @@ namespace _2FAplicattion.Controllers
         public IActionResult GenerateQRCode([FromBody] CreateTwoFactoAuthentication request)
         {
             string nomeUsuario = request.Login;
-            string nomeAplicacao = "Fitbank Admin";
+            string nomeAplicacao = "BarberBoss Admin";
             byte[] secretKey = KeyGeneration.GenerateRandomKey(20);
             string chaveConfiguracao = Base32Encoding.ToString(secretKey).Replace("=", "");
 
